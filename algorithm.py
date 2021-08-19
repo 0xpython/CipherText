@@ -1,15 +1,17 @@
 #Mappings for each letter
 from dictionary import *
+
+#Algorith for Encryption
 def encrypt(input): 
-  encrypted_format = ''
+  encrypted_text = ''
   for letter in input:
     letter = letter.lower()
     inum = index[letter] + shift
     if inum > 27:
       inum = inum - 27
-    encrypt_letter = index[inum]
-    encrypted_format = encrypted_format + encrypt_letter
-  return encrypted_format
+    encrypted_letter = index[inum]
+    encrypted_text = encrypted_text + encrypted_letter
+  return encrypted_text
 
 def decrypt(entext):
   decrypted_format = ''
